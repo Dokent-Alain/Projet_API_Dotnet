@@ -20,15 +20,15 @@ namespace PresenceManagement.Controllers
         {
             this.not_log = logger;
             this._ctx = _ctx;
-            this.Ps = new PersonService(this._ctx);
+           this.Ps = new PersonService(this._ctx);
         }
-        [HttpGet]
-        [AllowAnonymous]
-        [Route("Person")]
-        public List<Person> Get()
+       [HttpGet]
+       [AllowAnonymous]
+       [Route("Person")]
+       public List<Person> Get()
         {
-            this.not_log.Information("bonjour");
-            return this.Ps.GetPerson();
+          this.not_log.Information("bonjour");
+          return this.Ps.GetPerson();
         }
         ///<summary>
         /// Recuperation de données
